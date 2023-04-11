@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Page Counting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="total-peroject totalstyle">
+            <h3>Total Project</h3>
+            <h4 id="total-project"></h4>
+        </div>
+        <div class="total-peroject totalstyle">
+            <h3>Total Client</h3>
+            <h4 id="totalClient"></h4>
+        </div>
+        <div class="total-peroject totalstyle">
+            <h3>Total Achive</h3>
+            <h4 id="Achive"></h4>
+        </div>
+    </div>
+    <script>
+        let count = 0;
+        let Project = setInterval(project,100);
+        function project(){
+           count ++;
+           document.getElementById('total-project').innerText= count;
+            if(count== 50){
+                clearInterval(Project);                
+            }
+        }
+
+        let count2 = 0;
+        let Client = setInterval(client,100);
+        function client(){
+            count2 ++;
+            document.getElementById('totalClient').innerText= count2;
+            if(count2==70){
+                clearInterval(Client);                
+            }
+        }
+
+        let count3 = 0;
+        let Achive = setInterval(achive,100);
+        function achive(){
+            count3 ++;
+            document.getElementById('Achive').innerText= count3;
+            if(count3==60){
+                clearInterval(Achive);                
+            }
+        }
+        // let countTotal =0;
+        // let project = setInterval(totalCount,100);
+        // let client = setInterval(totalCount,100);
+        // let achive = setInterval(totalCount,100);
+
+        // function totalCount(){
+        //     countTotal++
+        //     document.getElementById('total-project').innerText= countTotal;
+        //     if(countTotal == 70 ){
+        //         clearInterval(project);
+        //     }
+        //     document.getElementById('totalClient').innerText= countTotal;
+        //     if(countTotal == 80){
+        //         clearInterval(client);
+        //     }
+        //     document.getElementById('Achive').innerText= countTotal;
+        //     if(countTotal == 90){
+        //         clearInterval(achive)
+        //     }
+        // }
+
+        
+    </script>
+    
+</body>
+</html>
